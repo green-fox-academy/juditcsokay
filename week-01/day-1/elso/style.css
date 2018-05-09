@@ -1,0 +1,73 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	padding-top: 0px;
+	background-image: url("topography.png"); 
+
+}
+
+h1, h2, h3 {
+	font-family: 'Crete Round', serif;
+}
+
+h1 {
+	font-size: 42px;
+	margin-bottom: 20PX;
+}
+
+h2 {
+	text-align: center;
+	font-size: 32px;
+}
+
+h3 {
+	font-size: 28px;
+	margin-bottom: 10px;
+}
+
+p {
+	font-family: 'Consolas';
+	font-size: 17px;
+}
+
+a {
+	color: #ff0099;
+	text-transform: uppercase;
+	font-family: 'Consolas';
+}
+
+#pink {
+	color: #ff0099;
+	margin-bottom: 12px;
+	font-family: 'Slabo 27px', serif;
+}
+
+header {
+	background-color: #333333;
+	margin: 0px;
+	padding: 8px 120px;
+	word-spacing: 30px;
+	font-size: 14px;
+}
+
+main {
+	/*margin-top: 80px;*/
+	padding: 5% 10%;
+}
+
+#icon {
+	height: 30px;
+	position: left;
+	margin-top: 2px;
+}
+
+#dash {
+	text-align: center;
+	margin: 50px 45px 0px;
+}
+
+#links {
+	float: right;
+	position: center;
+	margin-top: 8px;
+}

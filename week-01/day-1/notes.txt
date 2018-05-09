@@ -1,0 +1,22 @@
+Fundamentals
+
+    Yip, Yip, Yip!  -  
+    Internet  -  
+    IP (IPv4, IPv6, bits, layout)  -  hálózatot azonosít, nem egy gépet (pl ha wifire csatlakozunk több eszközzel, akkor mindnek a router IP címe az iP címe
+										(a Mac-cím a számítógépek egyedi címe), lehet statikus emg dinamikus, statikus akkor jó, ha szerverként üzemel a gép
+    Domain names  -  
+    ISP  -  Internetszolgáltató...
+    DNS  - 
+    Protocol  - 
+
+Data transport
+
+    How is data transmitted? (wire, air, wifi)  - 
+    TCP  -  
+    Packet  - 
+    Tracing packets  - 
+    URL  -  
+    Router  -  
+    Fault tolerant, Redundancy  -  
+	
+	szemantikus html tagek - olyan tagek amelyek segítik a keresőket, jelentésük van (pl a strong tag is ilyen szempontból jó!)
