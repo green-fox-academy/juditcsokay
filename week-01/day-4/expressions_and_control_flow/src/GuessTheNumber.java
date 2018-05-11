@@ -10,10 +10,23 @@ public class GuessTheNumber {
         // The stried number is lower
         // You found the number: 8
 
-        int nstoreNumber = 14;
+        int storedNumber = 14;
 
         System.out.println("I thought of a number! Guess!");
         Scanner scanner = new Scanner(System.in);
-        int guess = scanner.nextInt();
+        int guessNum = scanner.nextInt();
+
+        while (guessNum != storedNumber) {
+            if (guessNum < storedNumber) {
+                System.out.println("The stored number is higher!");
+                System.out.println("Guess more!");
+                guessNum = scanner.nextInt();
+            } else if (guessNum > storedNumber) {
+                System.out.println("The stored number is lower!");
+                System.out.println("Guess more!");
+                guessNum = scanner.nextInt();
+            }
+        }
+        System.out.println("You found the number: " + storedNumber);
     }
 }
