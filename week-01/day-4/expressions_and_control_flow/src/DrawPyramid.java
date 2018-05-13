@@ -19,22 +19,19 @@ public class DrawPyramid {
         Scanner scanner = new Scanner(System.in);
         int numberOfLines = scanner.nextInt();
 
-        int numberOfColumns = 1;
-        String pattern = "*";
-        String emptyPattern =" ";
+        int numberOfZeros = numberOfLines-1;
+        int numberOfAsterisks = 0;
 
-        
-
-        for (int i = 0; i < numberOfLines-1; i++) {
-            numberOfColumns = numberOfColumns+2;
-        }
-
-        for (int i = 0; i < numberOfLines; i++)
-            for (int j = 0; j < numberOfColumns; j++) {
-
-                System.out.print(pattern);
+        for (int i = 0; i < numberOfLines; i++) {
+            numberOfAsterisks = i * 2 + 1;
+            for (int j = 0; j < numberOfZeros; j++) {
+                System.out.print(" ");
             }
-            System.out.println();
-
+            for (int k = 0; k < numberOfAsterisks; k++) {
+                System.out.print("*");
+            }
+            numberOfZeros = numberOfZeros-1;
+            System.out.println("");
+        }
     }
 }
