@@ -23,6 +23,8 @@ public class DrawPyramid {
         String pattern = "*";
         String emptyPattern =" ";
 
+        
+
         for (int i = 0; i < numberOfLines-1; i++) {
             numberOfColumns = numberOfColumns+2;
         }
