@@ -6,6 +6,9 @@ public class IncrementElement {
     //with the following content: `[1, 2, 3, 4, 5]`
     //- Increment the third element
     //- Print the third element
-    
+
+    int[] t = {1,2,3,4,5};
+    t[2] += 2;
+    System.out.println(t[2]);
   }
 }
