@@ -14,7 +14,7 @@ public class CountLines {
     System.out.println(numberOfLines("secondfile"));
   }
 
-  private static int numberOfLines(String filename) {
+  public static int numberOfLines(String filename) {
     int numberoflines = 0;
     try {
       Path filepath = Paths.get(".\\secondfile.txt");

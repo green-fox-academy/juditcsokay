@@ -20,7 +20,7 @@ public class WriteMultipleLines {
     lineWriter(".\\fourthfile.txt", "pacii", 6);
   }
 
-  private static void lineWriter(String path, String word, int number) {
+  public static void lineWriter(String path, String word, int number) {
 
     try {
       Path filePath = Paths.get(path);

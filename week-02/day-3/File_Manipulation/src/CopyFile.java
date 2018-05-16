@@ -13,7 +13,7 @@ public class CopyFile {
     System.out.println(copyFile("thirdfile.txt", "fourthfile.txt"));
   }
 
-  private static boolean copyFile(String firstFile, String secondFile) {
+  public static boolean copyFile(String firstFile, String secondFile) {
     List<String> lines = null;
     List<String> moreLines = null;
     try {

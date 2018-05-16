@@ -12,7 +12,7 @@ public class DivideByZero {
     dividyByZero(number);
   }
 
-  private static void dividyByZero(int number) {
+  public static void dividyByZero(int number) {
     System.out.println("Give me a number please!");
     Scanner scanner = new Scanner(System.in);
     number = scanner.nextInt();
