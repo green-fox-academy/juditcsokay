@@ -17,7 +17,7 @@ public class WriteMultipleLines {
     // to the file and each line should be "apple"
     // The function should not raise any error if it could not write the file.
 
-    lineWriter(".\\thirdfile.txt", "pacii", 3);
+    lineWriter(".\\fourthfile.txt", "pacii", 6);
   }
 
   private static void lineWriter(String path, String word, int number) {
