@@ -11,9 +11,11 @@ public class PrintEachLine {
     // then it should print an error message like: "Unable to read file: my-file.txt"
 
     try {
-      Path filePath = Paths.get(".\\myfile.txt");
+      Path filePath = Paths.get(".\\my-file.txt");
       List<String> lines = Files.readAllLines(filePath);
-      System.out.println(lines.get(0));
+      for (int i = 0; i < lines.size(); i++) {
+        System.out.println(lines.get(i));
+      }
     } catch (Exception e) {
       System.out.println("Uh-oh, could not read the file!");
     }
