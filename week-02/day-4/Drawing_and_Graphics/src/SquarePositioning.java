@@ -1,22 +1,27 @@
 import javax.swing.*;
 
 import java.awt.*;
-import java.util.Random;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class FourRectangles {
+public class SquarePositioning {
 
   public static void mainDraw(Graphics graphics){
-    // draw four different size and color rectangles.
+    // create a square drawing function that takes 2 parameters:
+    // the x and y coordinates of the square's top left corner
+    // and draws a 50x50 square from that point.
+    // draw 3 squares with that function.
     // avoid code duplication.
-    int x = 20;
-    int y = 20;
-    for (int i = 0; i < 4; i++) {
-      graphics.setColor(new Color((int) (Math.random() * 256),(int) (Math.random() * 256),(int) (Math.random() * 256)));
-      graphics.drawRect(x,y,(int) (Math.random() * 50),(int) (Math.random() * 50));
-      x += 30;
-      y += 50;
+
+    squareDrawer(10,10,graphics);
+
+  }
+
+  private static void squareDrawer(int x, int y, Graphics graphics) {
+    for (int i = 0; i < 3; i++) {
+      graphics.drawRect(x,y,50,50);
+      x += 60;
+      //y += 60;
     }
 
   }
@@ -24,6 +29,7 @@ public class FourRectangles {
   //    Don't touch the code below
   static int WIDTH = 320;
   static int HEIGHT = 343;
+
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
     jFrame.setSize(new Dimension(WIDTH, HEIGHT));
