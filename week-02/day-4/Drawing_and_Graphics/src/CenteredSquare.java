@@ -2,17 +2,16 @@ import javax.swing.*;
 
 import java.awt.*;
 
-import static java.awt.Color.RED;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class LineInTheMiddle {
-  public static void mainDraw(Graphics graphics){
-    // draw a red horizontal line to the canvas' middle.
-    // draw a green vertical line to the canvas' middle.
-    graphics.setColor(Color.RED);
-    graphics.drawLine(80, 80, 160, 160);
-    graphics.setColor(new Color(40,224,61));
-    graphics.drawLine(160, 160, 140, 200);
+public class CenteredSquare {
+
+  public static void mainDraw(Graphics graphics) {
+    // Draw a green 10x10 square to the canvas' center.
+    graphics.setColor(new Color(129,239,142));
+    graphics.drawRect(155,155, 10,10);
+
+
   }
 
   // Don't touch the code below
@@ -33,6 +32,7 @@ public class LineInTheMiddle {
     protected void paintComponent(Graphics graphics) {
       super.paintComponent(graphics);
       mainDraw(graphics);
+
     }
   }
 }
