@@ -14,14 +14,9 @@ public class PurpleSteps {
   }
 
   public static void purpleSquareDiagonal(int squareSize, Color fillColor, Color drawColor, Graphics graphics) {
-    double diagonal= WIDTH*WIDTH + HEIGHT*HEIGHT;
-    diagonal = sqrt(diagonal);
-    double squareSizeDiagonal = (squareSize*squareSize)*2;
-    squareSizeDiagonal = sqrt(squareSizeDiagonal);
-    int loopSize = (int) diagonal / (int) squareSizeDiagonal;
     int x= squareSize;
     int y = squareSize;
-    for (int i = 0; i < loopSize-2; i++) {
+    for (int i = 0; i < 19; i++) {
       graphics.setColor(drawColor);
       graphics.drawRect(x, y,squareSize,squareSize);
       graphics.setColor(fillColor);
