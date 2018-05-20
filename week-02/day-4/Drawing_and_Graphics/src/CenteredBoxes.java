@@ -18,10 +18,7 @@ public class CenteredBoxes {
   }
 
   private static void squareDrawer(int size, Graphics graphics) {
-    //graphics.setColor(Color.RED);
-    //graphics.fillRect(0, 0, WIDTH, HEIGHT);
     for (int i = 0; i < 3; i++) {
-      //graphics.setColor(Color.YELLOW);
       int x = (WIDTH / 2) - ((size) / 2);
       int y = (HEIGHT / 2) - ((size) / 2);
       graphics.drawRect(x,y,size,size);
