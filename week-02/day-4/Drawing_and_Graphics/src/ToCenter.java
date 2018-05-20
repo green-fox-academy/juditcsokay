@@ -12,29 +12,25 @@ public class ToCenter {
     // Fill the canvas with lines from the edges, every 20 px, to the center.
 
     linesToCenter(0,0,graphics);
-
-
   }
 
   private static void linesToCenter(int xCoordinate, int yCoordinate, Graphics graphics) {
-    for (int i = 0; i < 16; i++) {
-      while (xCoordinate != 320 && yCoordinate != 0) {
+      while (xCoordinate != 320 && yCoordinate == 0) {
         graphics.drawLine(xCoordinate, yCoordinate, 160, 160);
         xCoordinate += 20;
       }
-      while (xCoordinate != 320 && yCoordinate != 320) {
+      while (xCoordinate == 320 && yCoordinate != 320) {
         graphics.drawLine(xCoordinate, yCoordinate, 160, 160);
         yCoordinate += 20;
       }
-      while (xCoordinate != 0 && yCoordinate != 320) {
+      while (xCoordinate != 0 && yCoordinate == 320) {
         graphics.drawLine(xCoordinate, yCoordinate, 160, 160);
         xCoordinate -= 20;
       }
-      while (xCoordinate != 0 && yCoordinate != 0) {
+      while (xCoordinate == 0 && yCoordinate != 0) {
         graphics.drawLine(xCoordinate, yCoordinate, 160, 160);
         yCoordinate -= 20;
       }
-    }
   }
 
   // Don't touch the code below
