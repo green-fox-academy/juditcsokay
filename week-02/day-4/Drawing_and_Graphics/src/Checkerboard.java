@@ -7,36 +7,39 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class Checkerboard {
   public static void mainDraw(Graphics graphics) {
     // Fill the canvas with a checkerboard pattern.
+
+    checkerBoardDrawer(8, graphics);
+  }
+
+  public static void checkerBoardDrawer(int numberOfFields, Graphics graphics) {
     int xCoordinate = 0;
     int yCoordinate = 0;
-    for (int i = 0; i < 16; i++) {
-      for (int j = 0; j < 16; j++) {
-        if (i % 2 == 0 && j % 2 == 0 || i % 2 != 0 && j % 2 != 0) {
-          //graphics.drawRect(xCoordinate,yCoordinate,20,20);
+    int size = WIDTH / numberOfFields;
+
+    for (int i = 0; i < numberOfFields; i++) {
+      for (int j = 0; j < numberOfFields; j++) {
+        if (i % 2 == j % 2) {
           graphics.setColor(Color.WHITE);
-          graphics.fillRect(xCoordinate,yCoordinate,20,20);
-          xCoordinate += 20;
+          graphics.fillRect(xCoordinate,yCoordinate,size,size);
+          xCoordinate += size;
         } else {
-          //graphics.drawRect(xCoordinate,yCoordinate,20,20);
           graphics.setColor(Color.BLACK);
-          graphics.fillRect(xCoordinate,yCoordinate,20,20);
-          xCoordinate += 20;
+          graphics.fillRect(xCoordinate,yCoordinate,size,size);
+          xCoordinate += size;
         }
       }
       xCoordinate = 0;
-      yCoordinate += 20;
+      yCoordinate += size;
     }
-
-
   }
 
   // Don't touch the code below
-  static int WIDTH = 320;
-  static int HEIGHT = 343;
+  static int WIDTH = 500;
+  static int HEIGHT = 500;
 
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
-    jFrame.setSize(new Dimension(WIDTH, HEIGHT));
+    jFrame.setSize(new Dimension(WIDTH, HEIGHT - 23));
     jFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
     jFrame.add(new ImagePanel());
     jFrame.setLocationRelativeTo(null);
