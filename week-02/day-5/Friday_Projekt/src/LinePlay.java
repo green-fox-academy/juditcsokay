@@ -7,24 +7,29 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 public class LinePlay {
   public static void mainDraw(Graphics graphics) {
 
-    linePlay(20,0,graphics);
-    
-
+    linePlay(WIDTH,HEIGHT,graphics);
   }
 
-  public static void linePlay(int xCoordinate, int yCoordinate, Graphics graphics) {
+  public static void linePlay(int width, int height, Graphics graphics) {
     graphics.setColor(Color.WHITE);
     graphics.fillRect(0, 0, WIDTH, HEIGHT);
-    for (int i = 0; i < 15; i++) {
+    //felső
+    int xCoordinate = 0;
+    int yCoordinate = 20;
+    for (int i = 0; i < width / 20; i++) {
       graphics.setColor(new Color(187,130,239));
-      graphics.drawLine(xCoordinate,yCoordinate,320,xCoordinate);
+      graphics.drawLine(xCoordinate,0,width,yCoordinate);
         xCoordinate += 20;
+        yCoordinate += 20;
     }
-    xCoordinate = 0;
-    for (int i = 0; i < 15; i++) {
+    xCoordinate = 20;
+    yCoordinate = 0;
+    //alsó
+    for (int i = 0; i < width / 20; i++) {
       graphics.setColor(new Color(103,239,132));
-      graphics.drawLine(yCoordinate,xCoordinate,xCoordinate,320);
+      graphics.drawLine(0,yCoordinate,xCoordinate,height);
       xCoordinate += 20;
+      yCoordinate += 20;
     }
   }
 
