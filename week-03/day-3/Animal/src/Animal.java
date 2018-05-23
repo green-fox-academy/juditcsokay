@@ -19,8 +19,4 @@ public class Animal {
     hunger--;
     thirst--;
   }
-
-  public static void main(String[] args) {
-    
-  }
 }
