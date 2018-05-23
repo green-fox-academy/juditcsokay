@@ -16,7 +16,7 @@ public class Animal {
   }
 
   public void play () {
-    hunger--;
-    thirst--;
+    hunger++;
+    thirst++;
   }
 }
