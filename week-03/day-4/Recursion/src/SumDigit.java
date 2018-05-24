@@ -5,16 +5,14 @@ public class SumDigit {
     // Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while 
     // divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
 
-    System.out.println(sumDigit(339, 0));
+    System.out.println(sumDigit(123));
   }
 
-  private static int sumDigit(int n, int sum) {
-    sum += n % 10;
-    n = n / 10;
-    if (n % 10 == n) {
-      return sum+=n;
+  private static int sumDigit(int n) {
+    if (n / 10 == 0) {
+      return n;
     } else {
-      return sumDigit(n,sum);
+      return n % 10 + sumDigit(n / 10);
     }
   }
 }
