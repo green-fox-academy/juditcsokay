@@ -22,8 +22,8 @@ public class YellowSquares {
         graphics.drawRect(tempWidth / 3, tempHeight / 3 * 2, tempWidth / 3, tempHeight / 3);
         graphics.drawRect(tempWidth / 3 * 2, tempHeight / 3, tempWidth / 3, tempHeight / 3);
       }
-      tempWidth = tempWidth + tempWidth/3;
-      tempHeight = tempHeight + tempHeight/3;
+      tempWidth = tempWidth/3 + tempWidth/3;
+      tempHeight = tempHeight/3 + tempHeight/3;
     }
   }
 
