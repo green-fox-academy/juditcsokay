@@ -13,17 +13,21 @@ public class YellowSquares {
 
     int tempWidth = WIDTH;
     int tempHeight = HEIGHT;
+    int x = tempWidth / 3;
+    int y = tempHeight / 3;
 
     for (int i = 0; i < 5; i++) {
       for (int j = 0; j < 4; j++) {
         graphics.setColor(new Color(247, 197, 57));
-        graphics.drawRect(tempWidth / 3, 0, tempWidth / 3, tempHeight / 3);
-        graphics.drawRect(0, tempHeight / 3, tempWidth / 3, tempHeight / 3);
-        graphics.drawRect(tempWidth / 3, tempHeight / 3 * 2, tempWidth / 3, tempHeight / 3);
-        graphics.drawRect(tempWidth / 3 * 2, tempHeight / 3, tempWidth / 3, tempHeight / 3);
+        graphics.drawRect(x,0, tempWidth / 3, tempHeight / 3);
+        graphics.drawRect(0, y, tempWidth / 3, tempHeight / 3);
+        graphics.drawRect(x, y * 2, tempWidth / 3, tempHeight / 3);
+        graphics.drawRect(x * 2, y, tempWidth / 3, tempHeight / 3);
       }
-      tempWidth = tempWidth/3 + tempWidth/3;
-      tempHeight = tempHeight/3 + tempHeight/3;
+      tempWidth = tempWidth/3;
+      tempHeight = tempHeight/3;
+      //x = tempWidth;
+      //x = tempHeight;
     }
   }
 
