@@ -11,13 +11,19 @@ public class YellowSquares {
     graphics.setColor(new Color(244,66,66));
     graphics.fillRect(0,0,WIDTH,HEIGHT);
 
-    for (int i = 0; i < 4; i++) {
-      graphics.setColor(new Color(247,197,57));
-      graphics.drawRect(WIDTH/3, 0, WIDTH/3, HEIGHT/3);
-      graphics.drawRect(0, HEIGHT/3, WIDTH/3, HEIGHT/3);
-      graphics.drawRect(WIDTH/3, HEIGHT/3*2, WIDTH/3, HEIGHT/3);
-      graphics.drawRect(WIDTH/3*2, HEIGHT/3, WIDTH/3, HEIGHT/3);
+    int tempWidth = WIDTH;
+    int tempHeight = HEIGHT;
 
+    for (int i = 0; i < 5; i++) {
+      for (int j = 0; j < 4; j++) {
+        graphics.setColor(new Color(247, 197, 57));
+        graphics.drawRect(WIDTH / 3, 0, WIDTH / 3, HEIGHT / 3);
+        graphics.drawRect(0, HEIGHT / 3, WIDTH / 3, HEIGHT / 3);
+        graphics.drawRect(WIDTH / 3, HEIGHT / 3 * 2, WIDTH / 3, HEIGHT / 3);
+        graphics.drawRect(WIDTH / 3 * 2, HEIGHT / 3, WIDTH / 3, HEIGHT / 3);
+      }
+      tempWidth = tempWidth/3;
+      tempHeight = tempHeight/3;
     }
   }
 
