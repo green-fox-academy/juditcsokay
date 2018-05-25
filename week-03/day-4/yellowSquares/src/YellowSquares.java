@@ -10,8 +10,11 @@ public class YellowSquares {
   public static void mainDraw(Graphics graphics){
     graphics.setColor(new Color(244,66,66));
     graphics.fillRect(0,0,WIDTH,HEIGHT);
+    graphics.setColor(new Color(247, 197, 57));
 
-    int tempWidth = WIDTH;
+    getSquares(0,0,WIDTH, graphics);
+
+   /* int tempWidth = WIDTH;
     int tempHeight = HEIGHT;
     int x = tempWidth / 3;
     int y = tempHeight / 3;
@@ -26,12 +29,26 @@ public class YellowSquares {
       }
       tempWidth = tempWidth/3;
       tempHeight = tempHeight/3;
-      //x = tempWidth;
-      //x = tempHeight;
-    }
+      x -= tempWidth;
+      y -= tempHeight;
+    }*/
   }
 
-
+  public static void getSquares(int x, int y, int size, Graphics graphics) {
+    graphics.drawRect(x, y, size, size);
+    if (size < 5) {
+      graphics.drawRect(size,y, size / 3, size / 3);
+      graphics.drawRect(x, size, size / 3, size / 3);
+      graphics.drawRect(x, size * 2, size / 3, size / 3);
+      graphics.drawRect(size * 2, y, size / 3, size / 3);
+    } else {
+      graphics.drawRect(size,y, size / 3, size / 3);
+      graphics.drawRect(x, size, size / 3, size / 3);
+      graphics.drawRect(x, size * 2, size / 3, size / 3);
+      graphics.drawRect(size * 2, y, size / 3, size / 3);
+      getSquares(x,y,size,graphics);
+    }
+  }
 
 
   static int WIDTH = 500;
