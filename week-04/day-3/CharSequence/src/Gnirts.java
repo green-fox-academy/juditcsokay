@@ -30,7 +30,7 @@ public class Gnirts implements CharSequence{
     return subString;
   }
 
-  
+
   public static void main(String[] args) {
 
     Gnirts s = new Gnirts("example");
