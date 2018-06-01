@@ -10,6 +10,7 @@ public class TriangleFractal {
     graphics.setColor(Color.WHITE);
     graphics.fillRect(0,0,WIDTH,HEIGHT);
 
+    bigTrianlge(graphics);
     recursiveTriangles(0,0, WIDTH, HEIGHT, graphics);
 
   }
@@ -22,7 +23,6 @@ public class TriangleFractal {
   }
 
   public static void recursiveTriangles(int x, int y, int width, int height, Graphics graphics) {
-    bigTrianlge(graphics);
 
     graphics.drawLine(x + width / 2, y, x + 3 * (width / 4), y + height / 2);
     graphics.drawLine(x + 3 * width / 4, y + height / 2, x + width / 4, y + height / 2);
