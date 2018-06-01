@@ -21,7 +21,7 @@ public class TriangleFractal {
       graphics.drawLine(WIDTH / 2, HEIGHT, 0, 0);
   }
 
-  public static void recursiveTriangles(int x, int y, int width, int height, /*int size*/ Graphics graphics) {
+  public static void recursiveTriangles(int x, int y, int width, int height, Graphics graphics) {
     bigTrianlge(graphics);
 
     graphics.drawLine(x + width / 2, y, x + 3 * (width / 4), y + height / 2);
