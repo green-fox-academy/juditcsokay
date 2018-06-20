@@ -1,12 +1,13 @@
 body {
 	background-color: #3E94EC;
 	margin: 20px 20px;
+	display: flex;
+	justify-content: center;
 }
 
 table {
 	border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
+    overflow: hidden;
 	text-align: left;
 	width: 57%;
 	border-collapse: collapse;
