@@ -20,7 +20,9 @@ div {
 	color: #666666;
 }
 
-p {
+label {
+	display: block;
+	margin-bottom: 7px;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 8px;
 	font-weight: 500;
