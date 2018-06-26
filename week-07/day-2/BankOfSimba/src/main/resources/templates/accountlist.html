@@ -17,7 +17,8 @@
                     <th>Name</th>
                     <th>Balance</th>
                     <th>Animal Type</th>
-                    <th>Owner</th>
+                    <th>Is a King?</th>
+                    <th>Role</th>
                 </tr>
             </thead>
             <tr th:unless="${#lists.isEmpty(bankaccounts)}" th:each="BankAccount : ${bankaccounts}" th:object="${BankAccount}">
@@ -25,7 +26,10 @@
                 <td><p th:text="*{name}"/></td>
                 <td><p th:text="*{balance} + '.00 Zebra'"/></td>
                 <td><p th:text="*{animalType}"/></td>
-                <td><p th:if="*{isKing()}" th:text="'King'" th:style="'color: gold'"/><p th:unless="*{isKing()}" th:text="'Not King'" /></td>
+                <td th:if="*{name} == 'Mufasa'" th:style="'color: gold'">Yes</td>
+                <td th:unless="*{name} == 'Mufasa'">No</td>
+                <td th:if="*{name} == 'Scar'">Bad guy</td>
+                <td th:unless="*{name} == 'Scar'">Good one</td>
             </tr>
         </table>
     </body>
