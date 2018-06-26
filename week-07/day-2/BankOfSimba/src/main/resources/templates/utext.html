@@ -6,10 +6,8 @@
     <meta charset="utf-8" />
 </head>
 <body>
-    <div th:object="${bankAccount}">
-        <p th:text="'Name: ' + *{name}"/>
-        <p th:text="'Balance: ' + *{balance} + '.00 Zebra'"/>
-        <p th:text="'Animal type: ' + *{animalType}"/>
-    </div>
+<p th:text="${testtext}"/>
+<p th:utext="${testtext}"/>
+</div>
 </body>
 </html>

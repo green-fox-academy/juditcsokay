@@ -14,4 +14,11 @@ public class ShowAccountDataController {
     model.addAttribute("bankAccount", bankAccount);
     return "show";
   }
+
+  @RequestMapping("/utext")
+  public String showTestText(Model model) {
+    String testtext = "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>";
+    model.addAttribute("testtext", testtext);
+    return "utext";
+  }
 }
