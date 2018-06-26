@@ -13,12 +13,14 @@
         <table>
             <thead>
                 <tr>
+                    <th>Index</th>
                     <th>Name</th>
                     <th>Balance</th>
                     <th>Animal Type</th>
                 </tr>
             </thead>
             <tr th:unless="${#lists.isEmpty(bankaccounts)}" th:each="BankAccount : ${bankaccounts}" th:object="${BankAccount}">
+                <td><p th:text="${BankAccountStat.index}"/></td>
                 <td><p th:text="*{name}"/></td>
                 <td><p th:text="*{balance} + '.00 Zebra'"/></td>
                 <td><p th:text="*{animalType}"/></td>
