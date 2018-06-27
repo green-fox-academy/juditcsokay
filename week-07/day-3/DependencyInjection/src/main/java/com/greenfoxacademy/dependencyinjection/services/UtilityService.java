@@ -1,6 +1,7 @@
 package com.greenfoxacademy.dependencyinjection.services;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -22,5 +23,9 @@ public class UtilityService {
 
   public String randomColor() {
     return colors.get(random.nextInt(colors.size()));
+  }
+
+  public boolean isValid(String email) {
+    return (email.contains("@") && email.contains("."));
   }
 }
