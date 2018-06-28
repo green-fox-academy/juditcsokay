@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gudetamagochi login</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+    <h1>Welcome to the world of lazyness!</h1>
+    <p>Please provide a name so you can associate it to your lazy egg!</p>
+    <form action="/login" method="post">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" value="Lazily go!" />
+    </form>
+</body>
+</html>
