@@ -2,7 +2,8 @@ package com.greenfoxacademy.gudetamagochi.models;
 
 public class Trick {
 
-  String name;
+  private String name;
+  public static final String[] TRICKS = {"Being moody", "Being self-defeating", "Chillin'", "Restin' on toast"};
 
   public Trick() {
   }

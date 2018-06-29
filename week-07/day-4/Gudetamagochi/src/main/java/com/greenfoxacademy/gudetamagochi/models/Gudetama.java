@@ -10,10 +10,13 @@ public class Gudetama {
   private String drink;
   private List<Trick> tricks;
 
-  public Gudetama() {}
+  public Gudetama() {
+    this("name");
+  }
 
   public Gudetama(String name) {
     this.name = name;
+    tricks = new ArrayList<>();
   }
 
   public String getName() {
@@ -39,6 +42,11 @@ public class Gudetama {
   public void setTricks(List<Trick> tricks) {
     this.tricks = tricks;
   }
+
+  public void addTrick(Trick trick) {
+   tricks.add(trick);
+  }
+
 
   public String getDrink() {
     return drink;
