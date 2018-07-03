@@ -1,0 +1,15 @@
+JDBC - 
+ORM - Hibernate is ilyen, azt írja le, hogy hogy csinálunk egy adattábla sorából obejctet és vissza; modelleket képez le adatbázitáblákká;
+JPA - egy pdf doksi, egy interface lényegében, gy specifikáció, hogy hogy csináljunk ORMet
+
+egy java model class atttól lesz modell ténylegesen hogy egy adatstruktúrát ír le, nincsen benne semmi logika!!! csak getter setter meg konstruktor;
+@Entity annotációval tudjuk jelölni, hogy ebből adatbázistáblát szeretnénk látni  -> így jön létre a kapcsolat az adatbázis meg a model class közt;
+
+@Table annotáció  - felül lehet írni, hogy ne az osztály neve legyen a tábla neve (mert default az osztály után nevezi el);
+
+mindig meg kell mondani, hogy az adott adatstruktúrában mi lesz az ID!!! kell primary keyt megadni mindenképp! @Id annotációval auto stratégia szerint kell
+generálni!!
+
+Repository - az adatbázisműveletekért felel, a model meg eközött van egy service layer;
+CrudRepository  - Spring bootnál, JPA külső függőséggel ő jön, vannak adott adatbázisművelet; create, read, use, delete;
+

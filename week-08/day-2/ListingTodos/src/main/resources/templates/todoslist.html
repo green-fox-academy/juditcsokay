@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Vmi</title>
+</head>
+<body>
+    <h1>Todos for today:</h1>
+    <ul>
+        <li>Start the day</li>
+        <li>Finish H2 workshop1</li>
+        <li>Finish JPA workshop2</li>
+        <li>Create a CRUD projekt</li>
+        <li th:each="onetodo : ${todos}" th:text="${onetodo.title}"></li>
+    </ul>
+</body>
+</html>
