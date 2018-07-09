@@ -35,6 +35,7 @@ public class MainController {
 
   @GetMapping("/{name}")
   public String renderProfilePage(@PathVariable("name") String name, Model model) {
+    model.addAttribute("tricklist", tamaService.getTama(name).getTricks());
     model.addAttribute("gudetama", tamaService.getTama(name));
     return "profile";
   }

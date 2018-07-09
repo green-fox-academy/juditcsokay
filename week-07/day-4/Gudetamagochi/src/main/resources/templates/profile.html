@@ -11,16 +11,14 @@
     <div id="menu">
         <ul>
             <li><a href="">Information</a></li>
-            <li><a href="">Trick Center</a></li>
+            <li><a th:href="@{${gudetama.name} + '/trickcenter'}">Trick Center</a></li>
         </ul>
     </div>
     <img src="/images/gudetama.png">
     <p th:utext="'This is ' + ${gudetama.name} + '!<br>Currently living on food nad drink. He knows ' + ${gudetama.tricks.size()} + ' tricks.'" />
     <h3>Known tricks</h3>
-    <ul>
-        <li th:each="trick: ${gudetama.getTricks()}" th:text="${trick}"></li>
-        <li>Chillin'</li>
-        <li>Being self-defeating</li>
+    <ul th:each="trick: ${tricklist}" th:object="${trick}">
+        <li  th:text="*{getName()}"></li>
     </ul>
 </body>
 </html>

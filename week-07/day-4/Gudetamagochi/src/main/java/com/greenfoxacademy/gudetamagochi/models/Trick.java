@@ -3,7 +3,7 @@ package com.greenfoxacademy.gudetamagochi.models;
 public class Trick {
 
   private String name;
-  public static final String[] TRICKS = {"Being moody", "Being self-defeating", "Chillin'", "Restin' on toast"};
+  public String[] TRICKS = {"Being moody", "Being self-defeating", "Chillin'", "Restin' on toast"};
 
   public Trick() {
   }
