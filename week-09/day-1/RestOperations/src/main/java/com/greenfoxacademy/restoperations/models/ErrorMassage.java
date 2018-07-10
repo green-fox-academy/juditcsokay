@@ -1,11 +1,13 @@
 package com.greenfoxacademy.restoperations.models;
 
-public class ErrorMassage{
+import jdk.nashorn.internal.runtime.regexp.joni.exception.ErrorMessages;
+
+public class ErrorMassage implements Parent{
 
   private String error;
 
-  public ErrorMassage() {
-    this.error = "Please provide an input!";
+  public ErrorMassage(String error) {
+    this.error = error;
   }
 
   public String getError() {
