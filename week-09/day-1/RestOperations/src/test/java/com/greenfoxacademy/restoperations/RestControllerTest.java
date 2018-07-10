@@ -84,8 +84,14 @@ public class RestControllerTest {
             .contentType(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk())
             .andExpect(content().contentType(contentType))
-            .andExpect(jsonPath("$.appended", is("Kutya")));
+            .andExpect(jsonPath("$.appended", is("kutya")));
   }
 
+  @Test
+  public void get404NotFoundIfThereIsNotAParameter_succesful() throws Exception {
+    mockMvc.perform(get("/appenda")
+            .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isNotFound());
+  }
 
 }
