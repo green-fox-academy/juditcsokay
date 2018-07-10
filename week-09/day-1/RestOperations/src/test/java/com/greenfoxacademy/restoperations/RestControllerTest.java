@@ -51,4 +51,41 @@ public class RestControllerTest {
             .andExpect(jsonPath("$.error", is("Please provide an input!")));
   }
 
+  @Test
+  public void getWelcomeMassage_succesful() throws Exception {
+    mockMvc.perform(get("/greeter?name=Petike&title=student")
+            .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(content().contentType(contentType))
+            .andExpect(jsonPath("$.welcome_message", is("Oh, hi there Petike, my dear student!")));
+  }
+
+  @Test
+  public void getErrorMessageIfTitleIsMissing_succesful() throws Exception {
+    mockMvc.perform(get("/greeter?name=Petike")
+            .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(content().contentType(contentType))
+            .andExpect(jsonPath("$.error", is("Please provide a title!")));
+  }
+
+  @Test
+  public void getErrorMessageIfNameIsMissing_succesful() throws Exception {
+    mockMvc.perform(get("/greeter?title=student")
+            .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(content().contentType(contentType))
+            .andExpect(jsonPath("$.error", is("Please provide a name!")));
+  }
+
+  @Test
+  public void getAppendedInput_succesful() throws Exception {
+    mockMvc.perform(get("/appenda/kuty")
+            .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(content().contentType(contentType))
+            .andExpect(jsonPath("$.appended", is("Kutya")));
+  }
+
+
 }
