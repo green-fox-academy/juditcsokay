@@ -1,14 +1,12 @@
 package com.greenfoxacademy.gudetamagochi.repositories;
 
 import com.greenfoxacademy.gudetamagochi.models.Gudetama;
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
 
-@Primary
-@Component
+@Repository
 public class TamaRepositoryImpl implements TamaRepository {
 
     private Map<String, Gudetama> tamas;

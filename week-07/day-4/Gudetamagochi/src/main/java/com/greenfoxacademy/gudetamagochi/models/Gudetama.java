@@ -47,7 +47,6 @@ public class Gudetama {
    tricks.add(trick);
   }
 
-
   public String getDrink() {
     return drink;
   }

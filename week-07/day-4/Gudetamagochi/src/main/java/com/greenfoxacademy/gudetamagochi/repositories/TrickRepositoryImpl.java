@@ -1,20 +1,38 @@
 package com.greenfoxacademy.gudetamagochi.repositories;
 
-import org.springframework.stereotype.Component;
+import com.greenfoxacademy.gudetamagochi.models.Trick;
+import org.springframework.stereotype.Repository;
 
-@Component
-public class TrickRepositoryImpl {
+import java.util.ArrayList;
+import java.util.List;
 
-  private String[] tricks = {"Being moody", "Being self-defeating", "Chillin'", "Restin' on toast"};
+@Repository
+public class TrickRepositoryImpl implements TrickRepository{
+
+  private List<Trick> tricks;
 
   public TrickRepositoryImpl() {
+    tricks = new ArrayList<>();
+    tricks.add(new Trick ("Chillin'"));
+    tricks.add(new Trick ("Backflip"));
+    tricks.add(new Trick ("Relaxing"));
   }
 
-  public String[] getTricks() {
+  @Override
+  public Trick getTrickByName(String name) {
+    Trick trick = new Trick();
+    for (int i = 0; i < tricks.size(); i++) {
+      if (tricks.get(i).getTrickName().equals(name))
+        trick = tricks.get(i);
+    }
+    return trick;
+  }
+
+  public List<Trick> getTricks() {
     return tricks;
   }
 
-  public void setTricks(String[] tricks) {
+  public void setTricks(List<Trick> tricks) {
     this.tricks = tricks;
   }
 }

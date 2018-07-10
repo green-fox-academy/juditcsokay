@@ -7,6 +7,10 @@ public class Trick {
   public Trick() {
   }
 
+  public Trick(String trickName) {
+    this. trickName = trickName;
+  }
+
   public String getTrickName() {
     return trickName;
   }
