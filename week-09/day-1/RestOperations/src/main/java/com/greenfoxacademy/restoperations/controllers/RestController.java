@@ -1,6 +1,7 @@
 package com.greenfoxacademy.restoperations.controllers;
 
 
+import com.greenfoxacademy.restoperations.models.Appended;
 import com.greenfoxacademy.restoperations.models.Doubled;
 import com.greenfoxacademy.restoperations.models.ErrorMassage;
 import com.greenfoxacademy.restoperations.models.Welcome;
@@ -35,12 +36,13 @@ public class RestController {
     return welcome;
   }
 
-  @GetMapping("/appenda/${appendable}")
-  public Object getAppended(@PathVariable("appendable") String appendable) {
+  @GetMapping("/appenda/{appendable}")
+  public Appended getAppended(@PathVariable("appendable") String appendable) {
     if (appendable != null) {
       appendable = appendable + "a";
-      Appended appended = new Appended
     }
+    Appended appended = new Appended(appendable);
+    return appended;
   }
 
 }
