@@ -16,7 +16,7 @@
         </ul>
     </div>
     <form action="#" th:action="'/' + ${gudetama.name} + '/learn'" method="post">
-        <select name="tricks" label="Tricks">
+        <select name="newtrick" label="Tricks">
             <option th:each="oneTrick: ${trickList}" th:text="${oneTrick.trickName}" th:value="${oneTrick.trickName}"></option>
         </select>
         <input type="submit" value="Learn!">
