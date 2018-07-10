@@ -1,6 +1,7 @@
 package com.greenfoxacademy.gudetamagochi.services;
 
 import com.greenfoxacademy.gudetamagochi.models.Gudetama;
+import com.greenfoxacademy.gudetamagochi.models.Trick;
 import com.greenfoxacademy.gudetamagochi.repositories.TamaRepository;
 import com.greenfoxacademy.gudetamagochi.repositories.TamaRepositoryImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,5 +27,10 @@ public class TamaServiceImpl implements TamaService{
   @Override
   public Gudetama getTama(String name) {
     return tamaRepository.findOneById(name);
+  }
+
+  @Override
+  public void addTrickToTama(Trick trick, String tamaName) {
+    tamaRepository.findOneById(tamaName).addTrick(trick);
   }
 }

@@ -17,6 +17,7 @@ public class Gudetama {
   public Gudetama(String name) {
     this.name = name;
     tricks = new ArrayList<>();
+    tricks.add(new Trick("valami"));
   }
 
   public String getName() {

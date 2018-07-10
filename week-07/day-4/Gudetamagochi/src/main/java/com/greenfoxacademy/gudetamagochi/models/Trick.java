@@ -15,7 +15,7 @@ public class Trick {
     return trickName;
   }
 
-  public void setName(String name) {
+  public void setTrickName(String trickName) {
     this.trickName = trickName;
   }
 }

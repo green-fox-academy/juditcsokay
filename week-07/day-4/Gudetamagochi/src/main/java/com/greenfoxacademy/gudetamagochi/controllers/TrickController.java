@@ -35,9 +35,7 @@ public class TrickController {
 
   @PostMapping("/{name}/learn")
   public String learnTricks(@PathVariable("name") String name, @ModelAttribute String trickName) {
-    Gudetama gudetama = tamaService.getTama(name);
-    Trick trick = trickService.getTrickByName(trickName);
-    gudetama.addTrick(trick);
+    tamaService.addTrickToTama(trickService.getTrickByName(trickName), name);
     return "redirect:/" + name;
   }
 }
