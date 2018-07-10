@@ -2,17 +2,16 @@ package com.greenfoxacademy.gudetamagochi.models;
 
 public class Trick {
 
-  private String name;
-  public String[] TRICKS = {"Being moody", "Being self-defeating", "Chillin'", "Restin' on toast"};
+  private String trickName;
 
   public Trick() {
   }
 
-  public String getName() {
-    return name;
+  public String getTrickName() {
+    return trickName;
   }
 
   public void setName(String name) {
-    this.name = name;
+    this.trickName = trickName;
   }
 }

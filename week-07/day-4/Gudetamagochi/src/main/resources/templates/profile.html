@@ -17,8 +17,8 @@
     <img src="/images/gudetama.png">
     <p th:utext="'This is ' + ${gudetama.name} + '!<br>Currently living on food nad drink. He knows ' + ${gudetama.tricks.size()} + ' tricks.'" />
     <h3>Known tricks</h3>
-    <ul th:each="trick: ${tricklist}" th:object="${trick}">
-        <li  th:text="*{getName()}"></li>
+    <ul>
+        <li th:each="trick: ${gudetama.getTricks()}" th:text="${trick.trickName}"></li>
     </ul>
 </body>
 </html>
